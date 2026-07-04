@@ -27,7 +27,7 @@ Full glossary with more terms: [`GLOSSARY.md`](./GLOSSARY.md)
 ## 🗺️ The whole workflow at a glance
 
 ```
- 1. Feed NotebookLM raw research on 3 companies (sources)
+ 1. Perform live Market Reasearch inside NotebookLM. You could alternatively add raw research on 3 companies (sources) manually.
           ↓
  2. Ask 3 strategic questions → save each answer as a Note
           ↓
@@ -55,7 +55,7 @@ Six steps. Zero code. Let's go.
    - **Google** — Gemini integrations across consumer apps & Workspace
    - **Apple** — Apple Intelligence, on-device chips, and privacy positioning
 
-> 💡 If you don't want to hunt for articles, copy a few paragraphs from each company's Wikipedia "AI strategy" section into a Google Doc and upload that — it's a perfectly valid source.
+> 💡 If you don't want to hunt for articles, click on Add Sources which open a pop up. You can enter the Part 1 prompt of the 01-market-research-questions.md. Choose the menu options of Web and Fast Search/Deep Search and press the right arrow icon in the pop up to add live sources via Google search.
 
 ![Step 1 - Adding sources to a NotebookLM notebook](./screenshots/step-1-add-sources.png)
 *(Screenshot placeholder — add yours here)*
@@ -70,11 +70,12 @@ This is the step most people skip — and it's the most important one. Instead o
 
 Open the copy-paste-ready prompts here: [`prompts/01-market-research-questions.md`](./prompts/01-market-research-questions.md)
 
-For **each** of the 3 prompts:
+For **each** of the 3 prompts from Part 2 Prompts:
 1. Paste it into NotebookLM's chat box.
 2. Read the answer.
 3. Click **Save as Note** (or the equivalent "save to notebook" button).
-4. Repeat for all 3 prompts — you should end up with 3 separate Notes.
+4. Once the saved note is visible, right click it and Save to Source.
+5. Repeat for all 3 prompts — you should end up with 3 separate Notes and 3 added sources on the left pane listing all the sources too.
 
 ![Step 2 - Saving an AI answer as a Note](./screenshots/step-2-save-as-note.png)
 *(Screenshot placeholder — add yours here)*
@@ -89,12 +90,12 @@ For **each** of the 3 prompts:
 
 1. In your notebook's source list, find the 3 Notes you just created.
 2. Select **only** those 3 Notes as active sources (deselect the raw articles for this step).
-3. Use NotebookLM's report/summary generation feature and ask it to produce a **Strategic Comparison Report** combining all 3.
+3. Use NotebookLM's reports feature and ask it to produce a **Market Outlook Report** combining all 3.
 
 ![Step 3 - Selecting Notes as sources to generate a report](./screenshots/step-3-generate-report.png)
 *(Screenshot placeholder — add yours here)*
 
-- [ ] I generated one combined Strategic Comparison Report from my 3 Notes
+- [ ] I generated one combined Market Outlook Report from my 3 Notes
 
 This Report is your evidence base. Everything from here on is opinion and design *built on top of* this evidence — which is exactly how real strategy work is supposed to flow.
 
@@ -104,8 +105,8 @@ This Report is your evidence base. Everything from here on is opinion and design
 
 **What you're doing:** Switching tools. NotebookLM is great at grounded research; [Gemini](https://gemini.google.com/) is great at creative, structured thinking. Real strategists move work between tools like this all the time.
 
-1. Copy your Strategic Comparison Report from NotebookLM.
-2. Open [Gemini](https://gemini.google.com/) and paste the report in as context.
+1. Copy your Strategic Comparison Report from NotebookLM by saving it as a Google doc and then downloading it.
+2. Open [Gemini](https://gemini.google.com/) and paste the report in as attachment. This serves as the context for the prompt.
 3. Immediately follow it with this prompt (also saved in [`prompts/02-strategy-analysis-prompt.md`](./prompts/02-strategy-analysis-prompt.md)):
 
 ```
@@ -189,9 +190,7 @@ notebooklm-pm-strategy-walkthrough/
 └── reference-outputs/          ← the actual AI responses from our run-through, for comparison
 ```
 
-## 🙋 Adding your own screenshots
-
-If you ran through this yourself, replace any file in [`/screenshots`](./screenshots) with your own image (keep the same filename, e.g. `step-1-add-sources.png`) and it'll automatically show up in this README on GitHub.
+## 🙋 Adding your own scenarios
 
 ---
 
