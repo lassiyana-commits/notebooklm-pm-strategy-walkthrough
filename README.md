@@ -9,6 +9,29 @@ This repo is a step-by-step replay of a real strategy exercise. Every prompt use
 
 ---
 
+## 🔄 The paradigm shift this repo demonstrates
+
+| Era | How strategy used to get made |
+|---|---|
+| **The Old Way** | Strategy relied on manual research, static financial models, isolated focus groups, and slow, monolithic planning cycles taking months. |
+| **The GenAI Era** | Generative AI accelerates the planning phase — synthesizing massive datasets, drafting content, and speeding up ideation. |
+| **The Agentic Era** | Autonomous agents execute multi-step plans, interact with live tools, test hypotheses, and output validated recommendations. |
+
+This exercise sits at the GenAI stage of that shift: you'll use **NotebookLM** (for grounded research) and **Gemini** (for strategic reasoning) together, the same two-tool loop strategists use to move from raw information to a boardroom-ready pitch.
+
+---
+
+## 🎯 Your role & the challenge
+
+> **Your role: Product Strategist at Apple.**
+> You are tasked with defending Apple's hardware ecosystem from commoditization, as proprietary AI models from competitors threaten to become the primary user interface people rely on.
+
+**The strategic context:** The rapid rise of LLMs from OpenAI, Google, and Microsoft presents a critical shift — hardware runs the risk of becoming commoditized if AI agents bypass traditional operating systems and device-native ecosystems entirely. Apple's counter-bet is **extreme cross-device personalization** built on a **privacy-first, on-device architecture** that cloud-only competitors can't easily replicate.
+
+This workshop simulates how Apple could use integrated local silicon and private cloud infrastructure to build what the strategy calls an **indefensible AI-hardware moat.**
+
+---
+
 ## 🧠 Before you start: What even is NotebookLM?
 
 [NotebookLM](https://notebooklm.google.com/) is a free Google tool that works like a research assistant with a photographic memory. Here's the only vocabulary you need:
@@ -27,7 +50,7 @@ Full glossary with more terms: [`GLOSSARY.md`](./GLOSSARY.md)
 ## 🗺️ The whole workflow at a glance
 
 ```
- 1. Perform live Market Reasearch inside NotebookLM. You could alternatively add raw research on 3 companies (sources) manually.
+ 1. Perform live Market Research inside NotebookLM. You could alternatively add raw research on 3 companies (sources) manually.
           ↓
  2. Ask 3 strategic questions → save each answer as a Note
           ↓
@@ -46,7 +69,7 @@ Six steps. Zero code. Let's go.
 
 ## Step 1 — Load NotebookLM with raw research (the "sources")
 
-**What you're doing:** Giving the AI real, current material so its opinions are grounded in facts instead of guesses.
+**What you're doing:** Decoding scattered, unstructured information so its opinions are grounded in facts instead of guesses — the same way real strategists work from messy real-world inputs instead of a clean brief.
 
 1. Go to [notebooklm.google.com](https://notebooklm.google.com/) and sign in with any Google account (it's free).
 2. Click **New Notebook** and name it something like `Apple Ecosystem Strategy`.
@@ -55,7 +78,7 @@ Six steps. Zero code. Let's go.
    - **Google** — Gemini integrations across consumer apps & Workspace
    - **Apple** — Apple Intelligence, on-device chips, and privacy positioning
 
-> 💡 If you don't want to hunt for articles, click on Add Sources which open a pop up. You can enter the Part 1 prompt of the 01-market-research-questions.md. Choose the menu options of Web and Fast Search/Deep Search and press the right arrow icon in the pop up to add live sources via Google search.
+> 💡 If you don't want to hunt for articles yourself, click **Add Sources**, which opens a pop-up. You can enter the Part 1 prompt from [`01-market-research-questions.md`](./prompts/01-market-research-questions.md), choose the **Web** and **Fast Search/Deep Search** menu options, and press the right-arrow icon in the pop-up to add live sources via Google Search.
 
 ![Step 1 - Adding sources to a NotebookLM notebook](./screenshots/step-1-add-sources.png)
 *(Screenshot placeholder — add yours here)*
@@ -70,12 +93,12 @@ This is the step most people skip — and it's the most important one. Instead o
 
 Open the copy-paste-ready prompts here: [`prompts/01-market-research-questions.md`](./prompts/01-market-research-questions.md)
 
-For **each** of the 3 prompts from Part 2 Prompts:
+For **each** of the 3 prompts from Part 2 — Prompts:
 1. Paste it into NotebookLM's chat box.
 2. Read the answer.
 3. Click **Save as Note** (or the equivalent "save to notebook" button).
-4. Once the saved note is visible, right click it and Save to Source.
-5. Repeat for all 3 prompts — you should end up with 3 separate Notes and 3 added sources on the left pane listing all the sources too.
+4. Once the saved note is visible, right-click it and select **Save to Source**.
+5. Repeat for all 3 prompts — you should end up with 3 separate Notes *and* 3 added sources listed in the left pane alongside your original sources.
 
 ![Step 2 - Saving an AI answer as a Note](./screenshots/step-2-save-as-note.png)
 *(Screenshot placeholder — add yours here)*
@@ -84,7 +107,7 @@ For **each** of the 3 prompts from Part 2 Prompts:
 
 ---
 
-## Step 3 — Turn your Notes into a single Strategic Comparison Report
+## Step 3 — Turn your Notes into a single Market Outlook Report
 
 **What you're doing:** NotebookLM lets you promote a Note into a Source. This means your *own* AI-generated analysis can now be combined with the original research to build something bigger.
 
@@ -105,8 +128,8 @@ This Report is your evidence base. Everything from here on is opinion and design
 
 **What you're doing:** Switching tools. NotebookLM is great at grounded research; [Gemini](https://gemini.google.com/) is great at creative, structured thinking. Real strategists move work between tools like this all the time.
 
-1. Copy your Strategic Comparison Report from NotebookLM by saving it as a Google doc and then downloading it.
-2. Open [Gemini](https://gemini.google.com/) and paste the report in as attachment. This serves as the context for the prompt.
+1. Copy your Market Outlook Report out of NotebookLM by saving it as a Google Doc, then downloading it.
+2. Open [Gemini](https://gemini.google.com/) and paste in the downloaded report as an attachment — this serves as the context for your prompt.
 3. Immediately follow it with this prompt (also saved in [`prompts/02-strategy-analysis-prompt.md`](./prompts/02-strategy-analysis-prompt.md)):
 
 ```
@@ -143,10 +166,19 @@ a generic cloud AI.
 
 Compare your story to our reference run: [`reference-outputs/02-day-in-the-life-journey.md`](./reference-outputs/02-day-in-the-life-journey.md) — ours follows "Sarah, VP of Product" through a cancelled flight, from Watch → Mac → iPhone.
 
+**Optional stress-test follow-up** — push your own idea further:
+
+```
+Critique this workflow. If a competitor (like Google on Android)
+tried to copy this, what specific Apple hardware integration makes
+ours impossible to replicate perfectly?
+```
+
 ![Step 5 - Gemini's day-in-the-life story](./screenshots/step-5-day-in-life-story.png)
 *(Screenshot placeholder — add yours here)*
 
 - [ ] I have a full narrative walking through morning → workday → evening
+- [ ] I identified one specific hardware integration a competitor couldn't easily copy
 
 ---
 
@@ -163,6 +195,16 @@ Compare your story to our reference run: [`reference-outputs/02-day-in-the-life-
 *(Screenshot placeholder — add yours here)*
 
 - [ ] I generated a video or audio overview of my finished strategy story
+
+---
+
+## 🏛️ Boardroom discussion
+
+Once you've finished, sit with this question — it's the one this exercise is actually testing:
+
+> **How does generating a concrete, multi-device user journey change the way you'd argue for a high-level corporate strategy in a boardroom?**
+
+Real strategy pitches don't win on abstract market definitions. They win when you can force alignment around something specific and hard to dismiss — in this case, an indefensible hardware-software integration story that a competitor genuinely can't copy.
 
 ---
 
