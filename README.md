@@ -1,4 +1,4 @@
-# 🍎 From Zero to Strategy Deck: Using NotebookLM Like a Product Manager
+# 🍎 From Zero to a Strategy Explainer Video: Using NotebookLM Like a Product Manager
 
 **Audience:** Anyone — no technical background, no prior PM experience required.
 **What you'll walk away with:** A real, finished product strategy document (an "Apple Ecosystem Lock-In" strategy) that you built almost entirely by talking to two free AI tools: **NotebookLM** and **Gemini**.
